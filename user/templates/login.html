@@ -1,0 +1,24 @@
+{% extends 'bases.html' %} 
+{% load static %}
+{% block content %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+<div class="container">
+    <h1>Iniciar Sesión</h1>
+    <div class="tabs">
+        <button class="active-tab">Iniciar Sesión</button>
+        <a href="{% url 'usuarios:register' %}"><button id="registro-b">Registrarme</button></a>
+    </div>
+    <div class="login-box">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="form-submit">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

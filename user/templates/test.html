@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Bienvenido a SportCenter</h2>
+{% if user.is_authenticated %}
+    <p>Hola, {{ user.first_name }}. <a href="{% url 'profile' %}">Ver Perfil</a></p>
+{% else %}
+    <p><a href="{% url 'login' %}">Iniciar Sesión</a> o <a href="{% url 'register' %}">Registrarse</a></p>
+{% endif %}
+{% endblock %}

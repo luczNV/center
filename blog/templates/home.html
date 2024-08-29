@@ -1,0 +1,40 @@
+{% extends 'bases.html' %} 
+{% load static %}
+{% block content %}
+
+<div class="inicio">
+    <div class="frame-publi">           
+        <h1 id="title">!OFERTAS¡</h1>
+        <div class="frame">
+            <h2 class="text">6 CUOTAS <br> <strong>SIN INTERES</strong> <br><a id="italic">ENVIO A TODO EL PAIS</a></h2>
+            <button class="mas"> <a href="#cartel"> VER MAS</a></button>
+        </div>
+    </div>
+</div>
+<div class="carusel-producto">
+    <h1 id="cartel">!ULTIAS OFERTAS¡</h1>
+    <div class="list-producto">
+        <div class="producto">
+            <div class="deco-producto">
+                <img src="{% static 'imagevideos/zapatillas.png' %}" alt="" id="portada">
+            </div>
+            <h1 id="marca">MARCA</h1>
+            <h2 id="titulo">TITULO</h2>
+            <h3 id="precio">$????</h3>
+            <h4 id="cuota">8 Cuotas sin interes</h4>
+            <h5 id="envio">ENVIO GRATIS</h5>
+        </div>
+    </div>
+</div>
+<div class="cartelera-promo">
+    <div class="promos">
+        <img src="static\imagevideos\p.png" alt="">
+        <img src="static\imagevideos\p1.png" alt="">
+        <img src="static\imagevideos\p2.png" alt="">
+    </div>
+</div>
+<div class="">
+
+</div>
+
+{% endblock %}

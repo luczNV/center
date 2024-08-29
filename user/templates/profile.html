@@ -1,0 +1,11 @@
+{% extends 'bases.html' %} 
+{% load static %}
+{% block content %}
+<h2>Perfil de Usuario</h2>
+<p>DNI: {{ user.dni }}</p>
+<p>Nombre: {{ user.first_name }}</p>
+<p>Apellido: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Teléfono: {{ user.phone }}</p>
+<a href="{% url 'logout' %}">Cerrar Sesión</a>
+{% endblock %}

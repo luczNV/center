@@ -1,0 +1,24 @@
+{% extends 'bases.html' %} 
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1>Registrarme</h1>
+    <div class="tabs">
+        <a href="{% url 'usuarios:login' %}"><button id="iniciar-b">Iniciar Sesión</button></a>
+        <button>Registrarme</button>
+    </div>
+    <div class="form-container">
+        <form action='.' method="POST" >
+            {% csrf_token %}
+                <input type="text" name="first_name" id="" placeholder="nombre" required>
+                <input type="text" name="last_name" id="" placeholder="apellido" required>
+                <input type="number" name="dni" id="" placeholder="DNI" required>
+                <input type="text" name="numer_phone" id="" placeholder="numero de telefono" required maxlength="13" >
+                <input type="email" name="email" id="" placeholder="email" required>
+                <input type="password" name="password1" id="" placeholder="contraseña" required>
+                <input type="password" name="password2" id="" placeholder="confirmar contraseña" required>
+                <button type="submit">registrarme</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

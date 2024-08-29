@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">
+        <a href="{% url 'home' %}"><img src="{% static 'imagevideos\ICO-LOGO.png' %}" alt="sport"></a>
+    </div>
+    <div class="nav-deco">
+        <input type="text" name="nav-busqueda" placeholder="busqueda">
+        <ul>
+            <li><a href="">Categoria</a></li>
+            <li><a href="">Hombre</a></li>
+            <li><a href="">Mujer</a></li>
+            <li><a href="">Deporte</a></li>
+        </ul>
+    </div>
+    <div class=>
+        <button class="button-nav" type="reset"><a href="{% url 'usuarios:login' %}"><img src="{% static 'imagevideos\ICO-USER.png' %}" alt="usuario"></a></button>
+        <button class="button-nav" type="reset"><img src="{% static 'imagevideos\ICO-COMPRA.png' %}" alt="compra"></button>
+    </div>
+  </nav>
+
+  <main>
+    {% block content %}
+        
+    {% endblock %}
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-content">
+        <a href="https://wa.me/1234567890" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/tu_usuario" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <p>Muchas gracias por ver nuestra página</p>
+    </div>
+  </footer>
+</body>
+</html>
